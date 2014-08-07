@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Hello World</h1>
+    <p>I'm hosted with GitHub Pages.</p>
+
+    Scratch notes:
+
+    hello world os x llvm
+
+    use llvm ir as a pseudo-assembly.
+
+    Download tools: http://llvm.org/releases/download.html#3.4.2
+    Even though it says "Clang", it's really the whole suite of tools.
+
+    "Hello World" module in IR: http://llvm.org/docs/LangRef.html#module-structure
+    save it as hello.ll
+
+    You may have to delete the last "foo" line, if the next step gives you trouble.
+
+    Compile the ll file to native assembly:
+
+        $ [CLANG]/bin/llc hello.ll
+
+    This will produce a hello.s file. Compile that to machine code:
+
+        $ gcc hello.s
+
+    Run the native executable:
+
+        $ ./a.out
+  </body>
+</html>
+
